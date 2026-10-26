@@ -35,3 +35,7 @@ build/
 ### POSTMAN ###
 .postman/
 postman/
+
+# Banco local e configurações privadas
+data/
+.env
