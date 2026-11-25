@@ -31,7 +31,6 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                // A API usa JWT no cabeçalho, sem autenticação por cookies.
                 .csrf(csrf -> csrf.disable())
 
                 .sessionManagement(session ->
@@ -67,7 +66,6 @@ public class SecurityConfig {
         FilterRegistrationBean<JwtAuthenticationFilter> registration =
                 new FilterRegistrationBean<>(jwtAuthenticationFilter);
 
-        // O filtro é executado pela cadeia de segurança, não diretamente pelo servidor.
         registration.setEnabled(false);
 
         return registration;

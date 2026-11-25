@@ -39,3 +39,7 @@ postman/
 # Banco local e configurações privadas
 data/
 .env
+
+# Dependências e build do frontend
+frontend/node_modules/
+frontend/dist/
